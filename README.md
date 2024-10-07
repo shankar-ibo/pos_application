@@ -1,4 +1,4 @@
-# kpn_pos_application
+# pos_application
 
 A new Flutter project.
 
