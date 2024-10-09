@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:kpn_pos_application/blocs/login_bloc.dart';
-import 'package:kpn_pos_application/ui/home_page.dart';
+import 'package:kpn_pos_application/ui/home/home_page.dart';
 import 'package:kpn_pos_application/ui/login_page.dart';
 import 'package:kpn_pos_application/vm/home_vm.dart';
 import 'package:kpn_pos_application/vm/login_vm.dart';
