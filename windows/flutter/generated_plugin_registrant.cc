@@ -9,6 +9,6 @@
 #include <printing/printing_plugin.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
-    PrintingPluginRegisterWithRegistrar(
-            registry->GetRegistrarForPlugin("PrintingPlugin"));
+  PrintingPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("PrintingPlugin"));
 }

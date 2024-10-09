@@ -17,9 +17,8 @@ dependencies:
   google_fonts: ^6.2.1
   dropdown_search: ^6.0.1
   flutter_svg: ^2.0.10+1
-  #http: ^1.2.2
-  http: ^0.13.3
-  printing: any
+  http: ^1.2.2
+  printing: ^5.13.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
