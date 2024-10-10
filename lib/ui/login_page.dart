@@ -228,7 +228,9 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   elevation: 6,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.offAndToNamed('/home');
+                },
                 child: Text(
                   'Sign In',
                 ),

@@ -13,8 +13,11 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.6
   get: ^4.6.6
-  http: ^0.13.3
+  http: ^1.2.2
   printing: any
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  dropdown_search: ^6.0.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -22,9 +25,7 @@ dependencies:
 
   #http: ^1.2.2
 
-  cupertino_icons: ^1.0.8
-  google_fonts: ^6.2.1
-  dropdown_search: ^6.0.1
+
 
 dev_dependencies:
   flutter_test:
@@ -42,7 +43,7 @@ flutter:
     - assets/
     - assets/images/invoice.pdf/
     - assets/invoice.pdf/
-    - assets/images/vegetables.png
+    # - assets/images/vegetables.png
     
   #   - images/a_dot_ham.jpeg
 
