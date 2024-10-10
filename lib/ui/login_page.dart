@@ -4,14 +4,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/route_manager.dart';
 import 'package:kpn_pos_application/blocs/login_bloc.dart';
 import 'package:kpn_pos_application/custom_colors.dart';
-import 'package:kpn_pos_application/vm/login_vm.dart';
+import 'package:kpn_pos_application/navigation/page_routes.dart';
+import 'package:kpn_pos_application/ui/Common_button.dart';
 
 import 'common_text_field.dart';
 
 class LoginPage extends StatefulWidget {
-  final LoginViewModel loginViewModel;
-
-  const LoginPage({super.key, required this.loginViewModel});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -36,6 +35,7 @@ class _LoginPageState extends State<LoginPage> {
 
   final GlobalKey<DropdownSearchState> dropDownKey =
       GlobalKey<DropdownSearchState>();
+  late ThemeData theme;
 
   @override
   void initState() {
@@ -56,6 +56,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    theme = Theme.of(context);
+
     return Scaffold(
       body: BlocProvider(
         create: (_) => LoginBloc(), // Ensure that LoginBloc is created here
@@ -103,16 +105,14 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 40),
             Text(
               'Welcome Back',
-              style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                    fontWeight: FontWeight.w500,
-                  ),
+              style: theme.textTheme.headlineLarge?.copyWith(
+                fontWeight: FontWeight.w500,
+              ),
             ),
             SizedBox(height: 10),
             Text(
               'Please enter your details to sign in',
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineSmall
+              style: theme.textTheme.headlineSmall
                   ?.copyWith(color: Colors.black45),
             ),
           ],
@@ -216,6 +216,7 @@ class _LoginPageState extends State<LoginPage> {
               width: double.infinity,
               height: 60,
               child: ElevatedButton(
+
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Theme.of(context).colorScheme.secondary,
                   textStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -246,17 +247,15 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Text(
                     'Unable to log in?',
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyLarge
+                    style: theme.textTheme.bodyLarge
                         ?.copyWith(color: Colors.black45),
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
                       'Contact operations',
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: Theme.of(context).colorScheme.primary),
+                      style: theme.textTheme.bodyLarge
+                          ?.copyWith(color: theme.colorScheme.primary),
                     ),
                   ),
                 ],
@@ -313,7 +312,7 @@ class _LoginPageState extends State<LoginPage> {
               Text(
                 label,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                style: theme.textTheme.labelLarge?.copyWith(
                     color: isSelected ? Colors.black : Colors.black45),
               ),
             ],
